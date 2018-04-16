@@ -35,7 +35,6 @@
     <!-- pojo的映射文件UserMapper引入到配入到配置文件中 -->
     <mappers>
         <!-- resource要写成路径 -->
-        <mapper resource="mapper/usermapper.xml"/>
         <mapper resource="mapper/employeemapper.xml"/>
 
 

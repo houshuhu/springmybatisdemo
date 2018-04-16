@@ -1,8 +1,7 @@
 package com.housh.springmybatisdemo;
 
-import com.housh.mapper.EmployeeMapper;
-import com.housh.model.Employee;
-import com.housh.model.UserModel;
+import com.housh.springmybatisdemo.mapper.EmployeeMapper;
+import com.housh.springmybatisdemo.model.Employee;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -40,23 +39,7 @@ public class SpringmybatisdemoApplicationTests {
         return null;
     }
 
-    @Test
-    public void GetById() {
-        String source = "mybatis/mybatis-config.xml";
-        InputStream stream = null;
-        try {
-            stream = Resources.getResourceAsStream(source);
-            SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(stream);
-            SqlSession session = factory.openSession();
-            UserModel userModel = session.selectOne("com.housh.mapper.findbyid", 1);
-            System.out.println(userModel.getName());
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 
     /*接口式編程*/
     @Test

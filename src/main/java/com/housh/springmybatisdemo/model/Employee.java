@@ -1,4 +1,4 @@
-package com.housh.model;
+package com.housh.springmybatisdemo.model;
 
 public class Employee {
     public  int id;

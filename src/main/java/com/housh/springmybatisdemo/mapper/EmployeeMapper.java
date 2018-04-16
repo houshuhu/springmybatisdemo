@@ -1,6 +1,6 @@
-package com.housh.mapper;
+package com.housh.springmybatisdemo.mapper;
 
-import com.housh.model.Employee;
+import com.housh.springmybatisdemo.model.Employee;
 import org.apache.ibatis.annotations.MapKey;
 
 import java.util.List;
