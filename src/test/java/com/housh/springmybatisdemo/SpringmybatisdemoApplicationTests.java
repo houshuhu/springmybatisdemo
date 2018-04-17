@@ -6,6 +6,7 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.apache.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,6 +21,8 @@ import java.util.Map;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringmybatisdemoApplicationTests {
+
+    private static Logger logger = Logger.getLogger(SpringmybatisdemoApplicationTests.class);
 
     @Test
     public void contextLoads() {
@@ -48,6 +51,7 @@ public class SpringmybatisdemoApplicationTests {
         EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
         Employee employee = mapper.getById(1);
         System.out.println(employee.toString());
+        logger.debug("LIJUI");
     }
 
     /*Map 入參*/
@@ -93,4 +97,7 @@ public class SpringmybatisdemoApplicationTests {
         Map<String, Employee> empByIdReturnMap = mapper.getEmpReturnEmployees();
         System.out.println(empByIdReturnMap);
     }
+
+
+
 }
