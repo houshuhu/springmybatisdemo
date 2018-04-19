@@ -1,7 +1,5 @@
 package com.housh.springmybatisdemo;
 
-import com.housh.springmybatisdemo.mapper.EmployeeMapper;
-import com.housh.springmybatisdemo.model.Employee;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -27,7 +25,7 @@ public class SpringmybatisdemoApplicationTests {
     @Test
     public void contextLoads() {
     }
-
+/*
     private SqlSession getSqlSession() {
         String source = "mybatis/mybatis-config.xml";
         InputStream stream = null;
@@ -44,7 +42,7 @@ public class SpringmybatisdemoApplicationTests {
 
 
 
-    /*接口式編程*/
+    *//*接口式編程*//*
     @Test
     public void GetEmployeeById() {
         SqlSession session = getSqlSession();
@@ -54,7 +52,7 @@ public class SpringmybatisdemoApplicationTests {
         logger.debug("LIJUI");
     }
 
-    /*Map 入參*/
+    *//*Map 入參*//*
     @Test
     public void GetByMapIdAndLastName() {
         SqlSession session = getSqlSession();
@@ -66,7 +64,7 @@ public class SpringmybatisdemoApplicationTests {
         System.out.println(byMapIdAndLastName);
     }
 
-    /*Select返回List*/
+    *//*Select返回List*//*
     @Test
     public void GetList() {
         SqlSession session = getSqlSession();
@@ -78,7 +76,7 @@ public class SpringmybatisdemoApplicationTests {
 
     }
 
-    /*Select 返回Map*/
+    *//*Select 返回Map*//*
     @Test
     public void getEmpByIdReturnMap()
     {
@@ -88,7 +86,7 @@ public class SpringmybatisdemoApplicationTests {
         System.out.println(empByIdReturnMap);
     }
 
-    /*Select 返回Map*/
+    *//*Select 返回Map*//*
     @Test
     public void getEmpReturnEmployees()
     {
@@ -96,7 +94,7 @@ public class SpringmybatisdemoApplicationTests {
         EmployeeMapper mapper = session.getMapper(EmployeeMapper.class);
         Map<String, Employee> empByIdReturnMap = mapper.getEmpReturnEmployees();
         System.out.println(empByIdReturnMap);
-    }
+    }*/
 
 
 

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.housh.springmybatisdemo.mapper.EmployeeMapper" >
+  <resultMap id="BaseResultMap" type="com.housh.springmybatisdemo.model.Employee" >
+    <result column="id" property="id" jdbcType="BIGINT" />
+    <result column="employee_code" property="employeeCode" jdbcType="VARCHAR" />
+    <result column="employee_name" property="employeeName" jdbcType="VARCHAR" />
+    <result column="company_id" property="companyId" jdbcType="BIGINT" />
+  </resultMap>
+  <insert id="insert" parameterType="com.housh.springmybatisdemo.model.Employee" >
+    insert into employee (id, employee_code, employee_name, 
+      company_id)
+    values (#{id,jdbcType=BIGINT}, #{employeeCode,jdbcType=VARCHAR}, #{employeeName,jdbcType=VARCHAR}, 
+      #{companyId,jdbcType=BIGINT})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select id, employee_code, employee_name, company_id
+    from employee
+  </select>
+</mapper>

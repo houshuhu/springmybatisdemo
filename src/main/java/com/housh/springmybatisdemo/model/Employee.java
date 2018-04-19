@@ -1,45 +1,43 @@
 package com.housh.springmybatisdemo.model;
 
 public class Employee {
-    public  int id;
-    public String last_name;
-    public char gender;
-    public String email;
+    private Long id;
 
-    public int getId() {
+    private String employeeCode;
+
+    private String employeeName;
+
+    private Long companyId;
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getEmployeeCode() {
+        return employeeCode;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setEmployeeCode(String employeeCode) {
+        this.employeeCode = employeeCode == null ? null : employeeCode.trim();
     }
 
-    public char getGender() {
-        return gender;
+    public String getEmployeeName() {
+        return employeeName;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName == null ? null : employeeName.trim();
     }
 
-    public String getEmail() {
-        return email;
+    public Long getCompanyId() {
+        return companyId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    @Override
-    public String toString() {
-        return  "last_name is:" +last_name+"email is :"+email;
+    public void setCompanyId(Long companyId) {
+        this.companyId = companyId;
     }
 }

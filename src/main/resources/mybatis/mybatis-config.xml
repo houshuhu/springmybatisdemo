@@ -6,21 +6,22 @@
 <configuration>
     <!-- 注意此配置文件内的元素的  -->
     <!-- 引入database.properties文件 -->
-    <properties resource="mybatis/mysql.properties"/>
+    <!--<properties resource="mybatis/mysql.properties"/>-->
     <!--配置mybatis的log实现为LOG4J  -->
     <!-- 配置后，后台就会有sql语句的输出 -->
     <settings>
         <setting name="logImpl" value="LOG4J"/>
+        <setting name="useGeneratedKeys" value="true">
     </settings>
 
 
-
+<!--
     <environments default="development">
         <environment id="development">
-            <!-- 配置事务管理 ，采用JDBC管理事务-->
+            &lt;!&ndash; 配置事务管理 ，采用JDBC管理事务&ndash;&gt;
             <transactionManager type="JDBC"/>
-            <!-- POOLED是mybatis的 数据源 -->
-            <!-- JNDI是基于tomcat的数据源 -->
+            &lt;!&ndash; POOLED是mybatis的 数据源 &ndash;&gt;
+            &lt;!&ndash; JNDI是基于tomcat的数据源 &ndash;&gt;
             <dataSource type="POOLED">
                 <property name="driver" value="${driver}"/>
                 <property name="url" value="${url}"/>
@@ -32,11 +33,9 @@
 
 
 
-    <!-- pojo的映射文件UserMapper引入到配入到配置文件中 -->
+    &lt;!&ndash; pojo的映射文件UserMapper引入到配入到配置文件中 &ndash;&gt;
     <mappers>
-        <!-- resource要写成路径 -->
+        &lt;!&ndash; resource要写成路径 &ndash;&gt;
         <mapper resource="mapper/employeemapper.xml"/>
-
-
-    </mappers>
+    </mappers>-->
 </configuration>
